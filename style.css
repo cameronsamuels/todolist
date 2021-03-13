@@ -1,0 +1,189 @@
+/* Cameron Samuels */
+
+html, body {
+    margin: 0;
+    padding: 0 0 30px;
+}
+
+body {
+    background: #eee;
+    color: #555;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.list-item {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px #bbb solid;
+    border-radius: 5px;
+}
+
+.list-item.checked * {
+    opacity: .5;
+}
+
+.list-item.checked .list-item-title {
+    text-decoration: line-through;
+}
+
+.list-item-title {
+    margin-left: 6px;
+    font-weight: bold;
+    line-height: 1;
+    outline: 0;
+}
+
+.list-item-priority {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 .4em;
+    padding: .2em;
+    background: #777;
+    color: #eee;
+    border-radius: 100vmax;
+    font-size: .8em;
+    line-height: .9rem;
+    text-align: center;
+    vertical-align: top;
+    user-select: none;
+    cursor: pointer;
+}
+
+.list-item-priority:hover {
+    background: #777;
+}
+
+.list-item-priority:empty {
+    width: .8rem;
+    height: .8rem;
+    margin: .2rem .5rem;
+    padding: 0;
+    background: 0;
+    border: 2px #ccc solid;
+}
+
+.list-item-delete {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 0 5px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 100vmax;
+    cursor: pointer;
+}
+
+.list-item-delete:hover {
+    background: #ccc;
+}
+
+.list-item-details {
+    font-size: .8em;
+}
+
+.list-item-due {
+    margin: 10px 0 2px;
+    font-size: .9rem;
+    background: 0;
+    border: 0;
+    outline: 0;
+}
+
+.list-item-due.overdue {
+    color: #f00;
+}
+
+.checked .overdue {
+    color: inherit;
+}
+
+.list-item-due:before {
+    content: "Due:";
+    margin-right: 3px;
+}
+
+::-webkit-calendar-picker-indicator {
+    margin-left: -5px;
+}
+
+.list-item-description {
+    margin: .5em 0;
+    font-size: .8rem;
+    outline: 0;
+}
+
+.list-item-description:empty {
+    height: 5px;
+    margin: -2px;
+}
+
+
+.clear-checked-items,
+.delete-list {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px #bbb solid;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.create-list-item {
+    box-sizing: border-box;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    padding: 25px 0;
+    background: #555;
+    color: #eee;
+    font-size: 25px;
+    line-height: 0;
+    text-align: center;
+    border-radius: 200vmax;
+    user-select: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.create-list-item:hover {
+    background: #777;
+}
+
+
+.tabs a {
+    display: inline-block;
+    margin: 10px 0;
+    margin-left: 10px;
+    padding: 10px;
+    color: inherit;
+    border: 1px #555 solid;
+    text-transform: capitalize;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.tabs a:hover {
+    background: #ddd;
+}
+
+.tabs a:target {
+    background: #ddd;
+}
